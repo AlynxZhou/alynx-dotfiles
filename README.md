@@ -3,48 +3,53 @@ Alynx's Dotfiles
 
 # Usage
 
+```
+$ git clone https://github.com/AlynxZhou/alynx-dotfiles.git .dotfiles.alynx
+$ cd .dotfiles.alynx
+```
+
 Besides linking those configurations, check their README.md for extra steps.
 
 ## zsh
 
 ```
-$ ln -s zsh/.zshrc ~/.zshrc
+$ ln -s $(pwd)/zsh/.zshrc ~/.zshrc
 ```
 
 # tmux
 
 ```
-$ ln -s tmux ~/.config/tmux
+$ ln -s $(pwd)/tmux ~/.config/tmux
 ```
 
 # screen
 
 ```
-$ ln -s screen/.screenrc ~/.screenrc
+$ ln -s $(pwd)/screen/.screenrc ~/.screenrc
 ```
 
 # rime
 
 ```
-$ ln -s rime ~/.config/ibus/rime
+$ ln -s $(pwd)/rime ~/.config/ibus/rime
 ```
 
 # nvim
 
 ```
-$ ln -s nvim ~/.config/nvim
+$ ln -s $(pwd)/nvim ~/.config/nvim
 ```
 
 # fonts
 
 ```
-$ ln -s fonts/fonts.conf ~/.config/fonts
+$ ln -s $(pwd)/fonts/fonts.conf ~/.config/fonts
 ```
 
 Or install it globally:
 
 ```
-# cp fonts/fonts.conf /etc/fonts/local.conf
+# cp $(pwd)/fonts/fonts.conf /etc/fonts/local.conf
 ```
 
 # License
