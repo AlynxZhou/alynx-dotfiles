@@ -1,4 +1,4 @@
-Alynx's zsh configuration files.
+Alynx's zsh configurations.
 ================================
 
 # Features
