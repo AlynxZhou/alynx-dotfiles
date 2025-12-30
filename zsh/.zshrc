@@ -20,6 +20,10 @@ fi
 # `-e` is Emacs and `-v` is Vi.
 # Alynx loves Emacs keymap.
 bindkey -e
+# Bash-like `Ctrl-h Ctrl-e` to edit command with editor.
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 # By default `Alt-h` is help.
 # Alynx likes to use it to backward kill word.
 # Use `backward-kill-word` instead of `backward-delete-word`, because it follows
@@ -123,14 +127,14 @@ setopt ksh_option_print
 
 # Treat the whole quoted string as word, this is useful on handling long
 # arguments like URL.
-autoload -U select-word-style && select-word-style shell
+autoload -Uz select-word-style && select-word-style shell
 
 # Color.
 # Set it as environment variables.
 if command -v "dircolors" &> /dev/null; then
 	eval $(dircolors -b)
 fi
-autoload -U colors && colors
+autoload -Uz colors && colors
 # Make Emacs use 24-bit color in SSH.
 if [[ -n ${SSH_CONNECTION} ]]; then
 	export COLORTERM="truecolor"
