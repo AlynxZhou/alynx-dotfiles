@@ -20,7 +20,10 @@ fi
 # `environment.d` is loaded by systemd user daemon, however, shells executed by
 # SSH do not belong to user daemon.
 if [[ -n ${SSH_CONNECTION} && -d "${HOME}/.config/environment.d/" ]]; then
+	# We need this to export all key/value pairs.
+	setopt allexport
 	source "${HOME}/.config/environment.d/"*.conf
+	unsetopt allexport
 fi
 
 # Keymap.
