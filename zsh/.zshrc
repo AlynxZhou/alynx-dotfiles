@@ -16,6 +16,13 @@ if [[ -f "${HOME}/.zprofile" ]]; then
 	source "${HOME}/.zprofile"
 fi
 
+# Environment variables.
+# `environment.d` is loaded by systemd user daemon, however, shells executed by
+# SSH do not belong to user daemon.
+if [[ -n ${SSH_CONNECTION} && -d "${HOME}/.config/environment.d/" ]]; then
+	source "${HOME}/.config/environment.d/"*.conf
+fi
+
 # Keymap.
 # `-e` is Emacs and `-v` is Vi.
 # Alynx loves Emacs keymap.
