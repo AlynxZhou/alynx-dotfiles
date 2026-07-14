@@ -345,10 +345,17 @@ if command -v "bat" &> /dev/null; then
 fi
 
 if command -v "vim" &> /dev/null; then
+	# No one really uses Vi.
 	alias vi="vim"
 elif command -v "nvim" &> /dev/null; then
+	# No Vim, but only Neovim, very rare.
 	alias vi="nvim"
+	alias vim="nvim"
 fi
+if command -v "nvim" &> /dev/null; then
+      alias nv="nvim"
+fi
+
 if command -v "emacsclient" &> /dev/null; then
 	# Always create new frame. I hardly use Emacs without GUI.
 	alias ec="emacsclient --create-frame --alternate-editor="
