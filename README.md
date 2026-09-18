@@ -16,31 +16,31 @@ Besides linking those configurations, check their README.md for extra steps.
 $ ln -s $(pwd)/zsh/.zshrc ~/.zshrc
 ```
 
-# tmux
+## tmux
 
 ```
 $ ln -s $(pwd)/tmux ~/.config/tmux
 ```
 
-# screen
+## screen
 
 ```
 $ ln -s $(pwd)/screen/.screenrc ~/.screenrc
 ```
 
-# rime
+## rime
 
 ```
 $ ln -s $(pwd)/rime ~/.config/ibus/rime
 ```
 
-# nvim
+## nvim
 
 ```
 $ ln -s $(pwd)/nvim ~/.config/nvim
 ```
 
-# fonts
+## fonts
 
 ```
 $ ln -s $(pwd)/fonts/fonts.conf ~/.config/fonts
@@ -51,6 +51,14 @@ Or install it globally:
 ```
 # cp $(pwd)/fonts/fonts.conf /etc/fonts/local.conf
 ```
+
+## opencode
+
+```
+$ ln -s $(pwd)/opencode/tui.json ~/.config/opencode
+```
+
+opencode adds other files to config dir so we cannot directly link the dir.
 
 # License
 
