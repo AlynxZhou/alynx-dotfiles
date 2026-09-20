@@ -527,6 +527,21 @@ if command -v "ffmpeg" &> /dev/null; then
 	}
 fi
 
+# Download Bilibili videos with yt-dlp, use `-I 1,3,5` to specific P numbers.
+if command -v "yt-dlp" &> /dev/null; then
+	alias bili-dl="yt-dlp --config-locations ~/.config/yt-dlp/bilibili.conf"
+fi
+
+# Download Twitter account's media with gallery-dl.
+if command -v "gallery-dl" &> /dev/null; then
+	function vtwittermp4() {
+		v2env gallery-dl --filter 'extension == "mp4"' "https://twitter.com/${1}/media"
+	}
+	function vtwittermedia() {
+		v2env gallery-dl "https://twitter.com/${1}/media"
+	}
+fi
+
 # Syntax highlight.
 if [[ -f "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
