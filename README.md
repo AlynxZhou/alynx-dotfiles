@@ -60,6 +60,12 @@ $ ln -s $(pwd)/opencode/tui.json ~/.config/opencode
 
 opencode adds other files to config dir so we cannot directly link the dir.
 
+## yt-dlp
+
+```
+$ ln -s $(pwd)/yt-dlp ~/.config/yt-dlp
+```
+
 # License
 
 Apache-2.0
