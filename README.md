@@ -54,11 +54,25 @@ Or install it globally:
 
 ## opencode
 
+opencode adds other files to config dir so we cannot directly link the dir.
+
+This will use `Ctrl+Enter` to submit input, instead of `Enter`.
+
 ```
 $ ln -s $(pwd)/opencode/tui.json ~/.config/opencode
 ```
 
-opencode adds other files to config dir so we cannot directly link the dir.
+This will add a provider for my local qwen3.8-27b with llama.cpp.
+
+```
+$ ln -s $(pwd)/opencode/opencode.jsonc ~/.config/opencode
+```
+
+This will add my custom agents.
+
+```
+$ ln -s $(pwd)/opencode/agents ~/.config/opencode
+```
 
 ## yt-dlp
 
