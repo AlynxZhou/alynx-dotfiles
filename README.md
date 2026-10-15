@@ -28,6 +28,12 @@ $ ln -s $(pwd)/tmux ~/.config/tmux
 $ ln -s $(pwd)/screen/.screenrc ~/.screenrc
 ```
 
+## alacritty
+
+```
+$ ln -s $(pwd)/alacritty ~/.config/alacritty
+```
+
 ## rime
 
 ```
