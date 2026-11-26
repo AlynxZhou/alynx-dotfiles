@@ -62,10 +62,11 @@ Or install it globally:
 
 opencode adds other files to config dir so we cannot directly link the dir.
 
-This will use `Ctrl+Enter` to submit input, instead of `Enter`.
+`tui` for v1, `cli` for v2.
 
 ```
 $ ln -s $(pwd)/opencode/tui.json ~/.config/opencode
+$ ln -s $(pwd)/opencode/cli.json ~/.config/opencode
 ```
 
 This will add a provider for my local qwen3.8-27b with llama.cpp.
